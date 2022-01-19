@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  background: white;
+  animation-fill-mode: forwards;
+  animation-duration: var(--dialog-animation-duration, 140ms);
+}
+
+:host[type="window"] {
+  animation-name: fadeInUp;
+  border-radius: 9px;
+  &.closing {
+    animation-name: fadeOutDown;
+  }
+}
+
+:host[type="shy"] {
+  min-width: 40vw;
+  min-height: 100vh;
+  height: 100vh;
+  width: auto;
+  border-radius: 9px 0 0 9px;
+  box-shadow: 0 0 6rem -4rem black;
+  animation-name: fadeInRight;
+  &.closing {
+    animation-name: fadeOutRight;
+  }
+}
+
+:host[type="push"] {
+  min-width: 100vw;
+  min-height: 100vh;
+  animation-name: zoomIn;
+  &.closing {
+    animation-name: fadeOut;
+  }
+}

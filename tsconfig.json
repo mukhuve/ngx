@@ -4,6 +4,16 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "dialog": [
+        "dist/dialog/dialog",
+        "dist/dialog"
+      ],
+      "stepper": [
+        "dist/stepper/stepper",
+        "dist/stepper"
+      ]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

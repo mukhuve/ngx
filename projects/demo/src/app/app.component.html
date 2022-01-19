@@ -1,0 +1,48 @@
+<header>
+  <h1>@mukhuve/ngx - Demo 🤖</h1>
+</header>
+<main>
+  <section class="library">
+    <h3 class="library__title">Dialog</h3>
+    <div class="library__controls">
+      <div>
+        Type:
+        <label>
+          <input
+            type="radio"
+            name="type"
+            value="shy"
+            [(ngModel)]="dialogConfig.type"
+          />
+          shy
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="type"
+            value="push"
+            [(ngModel)]="dialogConfig.type"
+          />
+          push
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="type"
+            value="window"
+            [(ngModel)]="dialogConfig.type"
+          />
+          window
+        </label>
+      </div>
+      <input type="text" [(ngModel)]="dialogConfig.classes" />
+      <input type="text" [(ngModel)]="text" />
+      <button (click)="open()">Open</button>
+    </div>
+  </section>
+  <section class="library">
+    <h3 class="library__title">Stepper</h3>
+    <div class="library__controls"></div>
+  </section>
+</main>
+<footer></footer>
