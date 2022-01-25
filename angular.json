@@ -102,23 +102,23 @@
         }
       }
     },
-    "dialog": {
+    "ngx": {
       "projectType": "library",
-      "root": "projects/dialog",
-      "sourceRoot": "projects/dialog/src",
-      "prefix": "mkh",
+      "root": "projects/ngx",
+      "sourceRoot": "projects/ngx/src",
+      "prefix": "mkv",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/dialog/ng-package.json"
+            "project": "projects/ngx/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/dialog/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/dialog/tsconfig.lib.json"
+              "tsConfig": "projects/ngx/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -126,40 +126,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/dialog/src/test.ts",
-            "tsConfig": "projects/dialog/tsconfig.spec.json",
-            "karmaConfig": "projects/dialog/karma.conf.js"
-          }
-        }
-      }
-    },
-    "stepper": {
-      "projectType": "library",
-      "root": "projects/stepper",
-      "sourceRoot": "projects/stepper/src",
-      "prefix": "mkh",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/stepper/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/stepper/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/stepper/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/stepper/src/test.ts",
-            "tsConfig": "projects/stepper/tsconfig.spec.json",
-            "karmaConfig": "projects/stepper/karma.conf.js"
+            "main": "projects/ngx/src/test.ts",
+            "tsConfig": "projects/ngx/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx/karma.conf.js"
           }
         }
       }

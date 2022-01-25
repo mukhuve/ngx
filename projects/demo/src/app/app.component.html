@@ -5,8 +5,8 @@
   <section class="library">
     <h3 class="library__title">Dialog</h3>
     <div class="library__controls">
-      <div>
-        Type:
+      <label>
+        config.type:
         <label>
           <input
             type="radio"
@@ -34,15 +34,27 @@
           />
           window
         </label>
-      </div>
-      <input type="text" [(ngModel)]="dialogConfig.classes" />
-      <input type="text" [(ngModel)]="text" />
+      </label>
+      <label>
+        <span> config.classes: </span>
+        <input type="text" [(ngModel)]="dialogConfig.classes" />
+      </label>
+      <label>
+        <span> config.inputs.text: </span>
+        <input type="text" [(ngModel)]="text" />
+      </label>
       <button (click)="open()">Open</button>
     </div>
   </section>
   <section class="library">
     <h3 class="library__title">Stepper</h3>
-    <div class="library__controls"></div>
+    <div class="library__controls">
+      <!-- <mkv-stepper>
+        <mkv-step> Hola 1 </mkv-step>
+        <mkv-step> Hola 2 </mkv-step>
+      </mkv-stepper> -->
+      <!-- TODO: QUITAR NPM LINK Y USAR LA LIBRERIA DIRECTAMENTE (ESTUPIDO) -->
+    </div>
   </section>
 </main>
 <footer></footer>

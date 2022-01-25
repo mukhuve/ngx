@@ -9,6 +9,10 @@
         "dist/dialog/dialog",
         "dist/dialog"
       ],
+      "ngx": [
+        "dist/ngx/ngx",
+        "dist/ngx"
+      ],
       "stepper": [
         "dist/stepper/stepper",
         "dist/stepper"

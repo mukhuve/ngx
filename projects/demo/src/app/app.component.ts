@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DialogConfig, DialogService } from 'projects/dialog/src/public-api';
+import { DialogConfig, DialogService } from 'projects/ngx/src/public-api';
 import { TestComponent } from './components/test/test.component';
 
 @Component({
