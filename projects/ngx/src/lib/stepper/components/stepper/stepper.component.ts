@@ -4,9 +4,13 @@ import { CdkStepper } from '@angular/cdk/stepper';
 @Component({
   selector: 'mkv-stepper',
   templateUrl: './stepper.component.html',
-  styleUrls: ['./stepper.component.css'],
+  styleUrls: ['./stepper.component.scss'],
   providers: [{ provide: CdkStepper, useExisting: StepperComponent }],
 })
 export class StepperComponent extends CdkStepper implements OnInit {
   ngOnInit(): void {}
+
+  toStep(index: number): void {
+    this.selectedIndex = index;
+  }
 }

@@ -1,6 +1,7 @@
 import { ComponentType } from '@angular/cdk/portal';
 import {
-  Component, HostBinding,
+  Component,
+  HostBinding,
   HostListener,
   Inject,
   InjectionToken,
@@ -8,7 +9,7 @@ import {
   OnInit,
   Renderer2,
   ViewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { DialogRef } from '../../types/reference';
 import { DialogConfig, DialogType } from '../../types/config';
@@ -31,6 +32,9 @@ export class WrapperComponent<C> implements OnInit {
   @HostBinding('class.closing')
   private closing: boolean = false;
 
+  @HostBinding('class.responsive')
+  private responsive: boolean = false;
+
   @HostBinding('attr.type')
   private type: DialogType = 'window';
 
@@ -43,6 +47,7 @@ export class WrapperComponent<C> implements OnInit {
   ) {
     this.type = config.type || 'window';
     this.classes = config.classes || '';
+    this.responsive = config.responsive == undefined ? true : config.responsive;
     this.ref.events.subscribe((e) => (this.closing = e.type === 'beforeclose'));
   }
 

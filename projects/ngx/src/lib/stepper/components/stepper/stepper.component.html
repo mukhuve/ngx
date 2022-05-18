@@ -1,1 +1,23 @@
-<p>stepper works!</p>
+<!-- <header>
+  <ng-content select="[header]"> </ng-content>
+  <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>
+</header>
+<div [style.display]="selected ? 'block' : 'none'">
+  <ng-container
+    [ngTemplateOutlet]="selected?.content || noSelect"
+  ></ng-container>
+  <ng-template #noSelect> ... </ng-template>
+</div>
+
+<footer class="step-navigation-bar">
+  <button class="nav-button" cdkStepperPrevious>&larr;</button>
+  <button
+    class="step"
+    *ngFor="let step of steps; let i = index"
+    [ngClass]="{ active: selectedIndex === i }"
+    (click)="toStep(i)"
+  >
+    Step {{ i + 1 }}
+  </button>
+  <button class="nav-button" cdkStepperNext>&rarr;</button>
+</footer> -->

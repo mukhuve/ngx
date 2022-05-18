@@ -6,8 +6,8 @@
 // }
 
 .mkv-dialog-backdrop {
-  background-color: #33333366;
-  backdrop-filter: blur(9px);
+  background-color: var(--mkv-dialog-backdrop, #33333366);
+  backdrop-filter: var(--mkv-dialog-backdrop-blur, 9px);
 }
 
 .mkv-dialog-content {

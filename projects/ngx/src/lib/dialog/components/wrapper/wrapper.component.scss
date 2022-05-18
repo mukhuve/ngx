@@ -4,20 +4,38 @@
   justify-content: flex-start;
   background: white;
   animation-fill-mode: forwards;
-  animation-duration: var(--dialog-animation-duration, 140ms);
+  animation-duration: var(--dialog-animation-duration, 180ms);
+  max-width: 100vw;
+  max-height: 100vh;
+
+  @media (max-width: 500px) {
+    &.responsive {
+      min-width: 100vw !important;
+      min-height: 100vh !important;
+      animation-name: zoomIn !important;
+      border-radius: 0 !important;
+      &.closing {
+        animation-name: zoomOut !important;
+      }
+    }
+  }
 }
 
 :host[type="window"] {
-  animation-name: fadeInUp;
+  animation-name: fadeInUpBig;
   border-radius: 9px;
+  min-width: 80vw;
+  min-height: 70vh;
+  overflow: hidden;
   &.closing {
-    animation-name: fadeOutDown;
+    animation-name: fadeOutDownBig;
   }
 }
 
 :host[type="shy"] {
-  min-width: 40vw;
+  min-width: 42vw;
   min-height: 100vh;
+  max-width: 63vw;
   height: 100vh;
   width: auto;
   border-radius: 9px 0 0 9px;
@@ -28,11 +46,13 @@
   }
 }
 
-:host[type="push"] {
+:host[type="push"],
+:host[type="fullscreen"] {
   min-width: 100vw;
   min-height: 100vh;
+  border-radius: 0 !important;
   animation-name: zoomIn;
   &.closing {
-    animation-name: fadeOut;
+    animation-name: zoomOut;
   }
 }
