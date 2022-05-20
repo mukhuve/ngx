@@ -1,10 +1,5 @@
 @import "@angular/cdk/overlay-prebuilt.css";
 
-// DIALOG
-
-// .mkv-dialog-panel {
-// }
-
 .mkv-dialog-backdrop {
   background-color: var(--mkv-dialog-backdrop, #33333366);
   backdrop-filter: var(--mkv-dialog-backdrop-blur, 9px);

@@ -5,6 +5,6 @@ import { NgForTrackByFieldDirective } from './directives/track-by-field.directiv
 @NgModule({
   declarations: [NgForTrackByFieldDirective],
   imports: [CommonModule],
-  exports: [NgForTrackByFieldDirective],
+  exports: [],
 })
 export class UtilsModule {}
