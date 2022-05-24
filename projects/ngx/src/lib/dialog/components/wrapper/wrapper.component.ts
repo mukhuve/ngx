@@ -35,6 +35,9 @@ export class WrapperComponent<C> implements OnInit {
   @HostBinding('class.responsive')
   private responsive: boolean = false;
 
+  @HostBinding('class.no-animate')
+  private disableAnimation: boolean = false;
+
   @HostBinding('attr.type')
   private type: DialogType = 'window';
 
@@ -48,7 +51,11 @@ export class WrapperComponent<C> implements OnInit {
     this.type = config.type || 'window';
     this.classes = config.classes || '';
     this.responsive = config.responsive == undefined ? true : config.responsive;
-    this.ref.events.subscribe((e) => (this.closing = e.type === 'beforeclose'));
+    this.disableAnimation = config.disableAnimation || false;
+    this.ref.events.subscribe((e) => {
+      this.closing = e.type === 'beforeclose';
+      if (config.disableAnimation) this.animationend();
+    });
   }
 
   ngOnInit() {
@@ -69,8 +76,8 @@ export class WrapperComponent<C> implements OnInit {
     this.render.addClass(ref.location.nativeElement, 'mkv-dialog-content');
   }
 
-  @HostListener('animationend', ['$event'])
-  animationend(event: AnimationEvent) {
+  @HostListener('animationend')
+  animationend() {
     if (this.closing) (this.ref as any).emiter.next({ type: 'afterclose' });
   }
 

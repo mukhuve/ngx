@@ -9,7 +9,7 @@ import { TestComponent } from './components/test/test.component';
 })
 export class AppComponent {
   text: string = '';
-  dialogConfig: DialogConfig = { type: 'window' };
+  dialogConfig: DialogConfig = { type: 'window', disableAnimation: false };
 
   constructor(public dialog: DialogService) {}
 

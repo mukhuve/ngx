@@ -3,5 +3,6 @@ export interface DialogConfig {
   type?: DialogType;
   classes?: string;
   responsive?: boolean;
+  disableAnimation?: boolean;
   inputs?: Record<string, any>;
 }

@@ -8,6 +8,10 @@
   max-width: 100vw;
   max-height: 100vh;
 
+  &.no-animate {
+    animation-name: none !important;
+  }
+
   @media (max-width: 500px) {
     &.responsive {
       min-width: 100vw !important;
