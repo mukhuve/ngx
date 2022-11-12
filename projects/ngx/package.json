@@ -7,6 +7,14 @@
       "sass": "./main.scss"
     }
   },
+  "scripts": {
+    "build": "tsc -p tsconfig.schematics.json",
+    "postbuild": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/collection.json ../../dist/ngx/"
+  },
+  "schematics": "./schematics/collection.json",
+  "ng-add": {
+    "save": "devDependencies"
+  },
   "peerDependencies": {
     "@angular/common": "^13.0.0",
     "@angular/core": "^13.0.0",

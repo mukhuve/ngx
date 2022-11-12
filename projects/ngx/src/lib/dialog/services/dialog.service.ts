@@ -9,7 +9,7 @@ import {
 import { DialogConfig } from '../types/config';
 import { DialogRef } from '../types/reference';
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class DialogService {
   constructor(private overlay: Overlay, private injector: Injector) {}
 
