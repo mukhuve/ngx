@@ -1,21 +1,11 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "paths": {
-      "dialog": [
-        "dist/dialog/dialog",
-        "dist/dialog"
-      ],
-      "ngx": [
-        "dist/ngx/ngx",
+      "@mukhuve/ngx": [
         "dist/ngx"
-      ],
-      "stepper": [
-        "dist/stepper/stepper",
-        "dist/stepper"
       ]
     },
     "forceConsistentCasingInFileNames": true,
