@@ -6,6 +6,9 @@
     "paths": {
       "@mukhuve/ngx": [
         "dist/ngx"
+      ],
+      "@mukhuve/ngx/*": [
+        "dist/ngx/*"
       ]
     },
     "forceConsistentCasingInFileNames": true,
