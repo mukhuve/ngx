@@ -1,8 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { DialogConfig, DialogService } from 'projects/ngx/src/public-api';
+import { FormsModule } from '@angular/forms';
+import { DialogConfig, DialogService } from '@mukhuve/ngx';
 import { TestComponent } from './components/test/test.component';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
