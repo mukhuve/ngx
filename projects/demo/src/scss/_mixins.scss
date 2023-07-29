@@ -1,0 +1,28 @@
+@mixin bounds($position: absolute,
+  $top: unset,
+  $right: unset,
+  $left: unset,
+  $bottom: unset) {
+  position: $position;
+  top: $top;
+  right: $right;
+  left: $left;
+  bottom: $bottom;
+}
+
+@mixin glow($dir, $colors...) {
+  &:before {
+    content: "";
+    @include bounds(absolute, 20%, 1rem, 1rem, 10%);
+    z-index: 1;
+    background: linear-gradient($dir, $colors);
+    filter: blur(26px);
+  }
+
+  &:after {
+    content: "";
+    @include bounds(absolute, 0, 0, 0, 0);
+    z-index: 1;
+    background: linear-gradient($dir, $colors);
+  }
+}

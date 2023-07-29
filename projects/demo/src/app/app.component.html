@@ -1,61 +1,9 @@
-<header>
-  <h1>@mukhuve/ngx - Demo 🤖</h1>
-</header>
+<app-header></app-header>
 <main>
-  <section class="library">
-    <h3 class="library__title">Dialog</h3>
-    <div class="library__controls">
-      <label>
-        config.disableAnimation:
-        <label>
-          <input
-            type="checkbox"
-            name="animation"
-            [(ngModel)]="dialogConfig.disableAnimation"
-          />
-          shy
-        </label>
-      </label>
-      <label>
-        config.type:
-        <label>
-          <input
-            type="radio"
-            name="type"
-            value="shy"
-            [(ngModel)]="dialogConfig.type"
-          />
-          shy
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="type"
-            value="push"
-            [(ngModel)]="dialogConfig.type"
-          />
-          push
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="type"
-            value="window"
-            [(ngModel)]="dialogConfig.type"
-          />
-          window
-        </label>
-      </label>
-      <label>
-        <span> config.classes: </span>
-        <input type="text" [(ngModel)]="dialogConfig.classes" />
-      </label>
-      <label>
-        <span> config.inputs.text: </span>
-        <input type="text" [(ngModel)]="text" />
-      </label>
-      <button (click)="open()">Open</button>
-    </div>
-  </section>
+  <app-form>
+    <app-control></app-control>
+    <app-control></app-control>
+  </app-form>
+
 </main>
-<footer></footer>
+<footer class="flex"></footer>
