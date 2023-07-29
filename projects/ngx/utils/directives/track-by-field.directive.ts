@@ -3,6 +3,7 @@ import { Directive, Host, Input } from '@angular/core';
 
 @Directive({
   selector: '[ngForTrackByField]',
+  standalone: true,
 })
 export class NgForTrackByFieldDirective {
   @Input()
