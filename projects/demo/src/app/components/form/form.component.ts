@@ -1,6 +1,5 @@
-import { Component, ContentChildren, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ControlDirective } from '../../directives/control.directive';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -10,8 +9,7 @@ import { ControlDirective } from '../../directives/control.directive';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  @ContentChildren(ControlDirective)
-  controls: ControlDirective[] = [];
+  controls: any[] = [];
 
   constructor() {}
 

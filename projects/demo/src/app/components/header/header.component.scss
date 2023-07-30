@@ -1,4 +1,3 @@
 :host {
-  @apply flex flex-row items-center gap-2 text-zinc-800 p-3 bg-transparent dark:text-zinc-200;
-  @apply border-b border-zinc-800 dark:border-zinc-200 backdrop-blur-md;
+  @apply flex flex-row items-center gap-2 p-4 bg-transparent backdrop-blur-md;
 }

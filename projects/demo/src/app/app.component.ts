@@ -2,19 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DialogConfig, DialogService } from '@mukhuve/ngx/dialog';
-import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './components/form/form.component';
-import { ControlDirective } from './directives/control.directive';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    HeaderComponent,
-    FormComponent,
-    ControlDirective,
-  ],
+  imports: [CommonModule, FormsModule, HeaderComponent, FormComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
