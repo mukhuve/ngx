@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'mkv-toast',
+  selector: 'mv-toast',
+  standalone: true,
   templateUrl: './toast.component.html',
   styleUrls: ['./toast.component.css']
 })

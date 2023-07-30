@@ -1,4 +1,4 @@
-export * from './directives/track-by-field.directive';
+export * from './src/directives/track-by-field.directive';
 export * from './helpers/objects.helper';
 export * from './helpers/colors.helper';
 export * from './helpers/crypto.helper';

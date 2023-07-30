@@ -6,7 +6,7 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LoadingComponent } from '../../../demo/src/app/ux/components/loading/loading.component';
+import { LoadingComponent } from '../../../../demo/src/app/ux/components/loading/loading.component';
 
 /**
  * @summary

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CdkStepper } from '@angular/cdk/stepper';
+import { CdkStepper, CdkStepperModule } from '@angular/cdk/stepper';
 
 @Component({
-  selector: 'mkv-stepper',
+  selector: 'mv-stepper',
+  standalone: true,
+  imports: [CdkStepperModule],
   templateUrl: './stepper.component.html',
   styleUrls: ['./stepper.component.scss'],
   providers: [{ provide: CdkStepper, useExisting: StepperComponent }],

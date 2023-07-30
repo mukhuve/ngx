@@ -98,7 +98,7 @@
       "projectType": "library",
       "root": "projects/ngx",
       "sourceRoot": "projects/ngx/src",
-      "prefix": "mkv",
+      "prefix": "mv",
       "schematics": {
         "@schematics/angular:component": {
           "standalone": true,

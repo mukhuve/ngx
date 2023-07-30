@@ -23,8 +23,8 @@ export class DialogService {
       positionStrategy,
       hasBackdrop: true,
       disposeOnNavigation: true,
-      backdropClass: 'mkv-dialog-backdrop',
-      panelClass: 'mkv-dialog-panel',
+      backdropClass: 'mv-dialog-backdrop',
+      panelClass: 'mv-dialog-panel',
     });
 
     const dialogRef = new DialogRef(overlayRef);
