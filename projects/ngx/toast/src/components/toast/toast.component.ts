@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'mv-toast',
   standalone: true,
   templateUrl: './toast.component.html',
-  styleUrls: ['./toast.component.css']
+  styleUrls: ['./toast.component.scss']
 })
 export class ToastComponent implements OnInit {
 

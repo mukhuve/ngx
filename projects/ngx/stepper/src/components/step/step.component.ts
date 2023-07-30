@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [CdkStepperModule],
   templateUrl: './step.component.html',
-  styleUrls: ['./step.component.css'],
+  styleUrls: ['./step.component.scss'],
   providers: [{ provide: CdkStep, useExisting: StepComponent }],
 })
 export class StepComponent implements OnInit {
