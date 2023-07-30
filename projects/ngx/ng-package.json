@@ -3,6 +3,6 @@
   "dest": "../../dist/ngx",
   "assets": ["./main.scss"],
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "public-api.ts"
   }
 }
