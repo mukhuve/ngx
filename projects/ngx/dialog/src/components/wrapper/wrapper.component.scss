@@ -25,8 +25,8 @@
 :host[type="window"] {
   animation-name: fadeInUpBig;
   border-radius: 9px;
-  min-width: 80svw;
-  min-height: 70svh;
+  // min-width: 80svw;
+  // min-height: 70svh;
   overflow: hidden;
   &.closing {
     animation-name: fadeOutDownBig;

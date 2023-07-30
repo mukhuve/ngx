@@ -4,10 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { DialogConfig, DialogService } from '@mukhuve/ngx/dialog';
 import { FormComponent } from './components/form/form.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SampleComponent } from './components/sample/sample.component';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, FormsModule, HeaderComponent, FormComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HeaderComponent,
+    FormComponent,
+    SampleComponent,
+  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -32,10 +39,10 @@ export class AppComponent {
   }
 
   open() {
-    // const { dialog, text, dialogConfig } = this;
-    // dialog.open(TestComponent, {
-    //   inputs: { text },
-    //   ...dialogConfig,
-    // });
+    const { dialog, text, dialogConfig } = this;
+    dialog.open(SampleComponent, {
+      inputs: { text },
+      ...dialogConfig,
+    });
   }
 }
