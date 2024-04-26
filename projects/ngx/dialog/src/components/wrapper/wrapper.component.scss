@@ -1,24 +1,20 @@
 :host {
-  @apply flex flex-row items-stretch justify-start bg-white;
   animation-fill-mode: forwards;
   animation-duration: var(--dialog-animation-duration, 180ms);
-  max-width: 100svw;
-  max-height: 100svh;
+
+  @apply flex flex-row items-stretch justify-start bg-white max-w-[100svw] max-h-[100svh]
+         min-w-[100svw] min-h-[100svh] md:min-w-[unset] md:min-h-[unset];
+
+  &.responsive {
+    animation-name: zoomIn !important;
+    border-radius: 0 !important;
+    &.closing {
+      animation-name: zoomOut !important;
+    }
+  }
 
   &.no-animate {
     animation-name: none !important;
-  }
-
-  @media (max-width: 500px) {
-    &.responsive {
-      min-width: 100svw !important;
-      min-height: 100svh !important;
-      animation-name: zoomIn !important;
-      border-radius: 0 !important;
-      &.closing {
-        animation-name: zoomOut !important;
-      }
-    }
   }
 }
 
