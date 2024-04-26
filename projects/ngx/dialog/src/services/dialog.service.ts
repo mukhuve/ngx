@@ -1,6 +1,6 @@
 import { ComponentType, Overlay } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { Injectable, Injector } from '@angular/core';
+import { Injectable, Injector, inject } from '@angular/core';
 import {
   DIALOG_COMPONENT,
   DIALOG_CONFIG,
@@ -11,7 +11,8 @@ import { DialogRef } from '../types/reference';
 
 @Injectable()
 export class DialogService {
-  constructor(private overlay: Overlay, private injector: Injector) {}
+  overlay = inject(Overlay);
+  injector = inject(Injector);
 
   open<T>(component: ComponentType<T>, config?: DialogConfig): DialogRef {
     let positionStrategy = this.overlay.position().global().centerVertically();

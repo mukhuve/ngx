@@ -1,10 +1,10 @@
 {
   "name": "@mukhuve/ngx",
-  "version": "0.0.9",
-  "style": "./main.scss",
+  "version": "0.0.10",
+  "style": "./styles.scss",
   "exports": {
     ".": {
-      "sass": "./main.scss"
+      "sass": "./styles.scss"
     }
   },
   "scripts": {
@@ -16,9 +16,9 @@
     "save": "devDependencies"
   },
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0",
-    "@angular/cdk": "^15.0.0"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@angular/cdk": "^16.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
