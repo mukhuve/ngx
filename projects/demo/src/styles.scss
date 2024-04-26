@@ -1,3 +1,22 @@
-@use "vendors";
-@use "globals";
-@use "typography";
+@import "~normalize.css";
+@import "~animate.css";
+@import "typography";
+@import "../../../dist/ngx/styles.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 100svw;
+  height: 100svh;
+
+  * {
+    box-sizing: border-box;
+    outline: none !important;
+  }
+
+  app-root {
+    z-index: 2;
+  }
+}

@@ -1,27 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class", ":global(.dark)"],
-  content: ["./projects/demo/src/**/*.{html,ts,scss}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'base-100': '#f3f4f6',
+        'base-200': '#e5e7eb',
+        primary: '#0284c7',
+        secondary: '#1e40af',
+        neutral: '#262626',
+      },
+      fontFamily: {
+        body: ["Nunito"]
+      }
+    }
   },
-  // plugins: [
-  //   function ({ addBase, theme }) {
-  //     function extractColorVars(colorObj, colorGroup = "") {
-  //       return Object.keys(colorObj).reduce((vars, colorKey) => {
-  //         const value = colorObj[colorKey];
-
-  //         const newVars =
-  //           typeof value === "string"
-  //             ? { [`--color${colorGroup}-${colorKey}`]: value }
-  //             : extractColorVars(value, `-${colorKey}`);
-
-  //         return { ...vars, ...newVars };
-  //       }, {});
-  //     }
-  //     addBase({
-  //       ":root": extractColorVars(theme("colors")),
-  //     });
-  //   },
-  // ],
+  content: [
+    "./**/*.{html,ts,scss}"
+  ]
 };
