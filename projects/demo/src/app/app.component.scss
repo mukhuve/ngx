@@ -1,5 +1,15 @@
 :host {
-  @apply bg-white;
-  width: 100svw;
-  height: 100svh;
+  @apply flex flex-col flex-auto;
+
+  .component-box {
+    @apply rounded flex flex-col bg-white min-h-52 border border-stone-300 overflow-hidden gap-4;
+
+    &__header {
+      @apply text-sm px-4 pt-4 gap-4 font-light inline-flex items-center flex-initial h-auto text-stone-500;
+    }
+
+    &__content {
+      @apply flex-1 px-4 pb-4 gap-4 overflow-hidden flex flex-col items-center justify-center;
+    }
+  }
 }

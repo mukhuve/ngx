@@ -1,11 +1,11 @@
 @import "@angular/cdk/overlay-prebuilt.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
 .mv-dialog-backdrop {
-  @apply bg-base-100 bg-opacity-60 backdrop-blur-md;
+  @apply bg-white bg-opacity-60 backdrop-blur-md;
 }
 
 .mv-dialog-content {

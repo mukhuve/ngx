@@ -8,6 +8,7 @@
 @tailwind utilities;
 
 body {
+  @apply bg-stone-100 flex flex-col;
   width: 100svw;
   height: 100svh;
 

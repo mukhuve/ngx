@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DialogConfig, DialogService } from '@mukhuve/ngx/dialog';
 import { FormComponent } from './components/form/form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SampleComponent } from './components/sample/sample.component';
@@ -21,9 +20,8 @@ import { SampleComponent } from './components/sample/sample.component';
 })
 export class AppComponent {
   text: string = '';
-  dialogConfig: DialogConfig = { type: 'window', disableAnimation: false };
 
-  constructor(public dialog: DialogService) {
+  constructor() {
     const match = window.matchMedia('(prefers-color-scheme: dark)');
     const preferDark = !('theme' in localStorage) && match?.matches;
 
@@ -36,13 +34,5 @@ export class AppComponent {
 
   mode(mode: 'dark' | 'light') {
     localStorage['theme'] = mode;
-  }
-
-  open() {
-    const { dialog, text, dialogConfig } = this;
-    dialog.open(SampleComponent, {
-      inputs: { text },
-      ...dialogConfig,
-    });
   }
 }
