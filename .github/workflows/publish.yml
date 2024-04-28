@@ -32,6 +32,6 @@ jobs:
 
       - name: Publish 🚀
         shell: bash
-        run: pnpm publish dist/ngx --access public
+        run: pnpm publish dist/ngx --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
