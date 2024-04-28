@@ -1,61 +1,57 @@
-<header>
-  <h1>@mukhuve/ngx - Demo 🤖</h1>
-</header>
-<main>
-  <section class="library">
-    <h3 class="library__title">Dialog</h3>
-    <div class="library__controls">
-      <label>
-        config.disableAnimation:
-        <label>
-          <input
-            type="checkbox"
-            name="animation"
-            [(ngModel)]="dialogConfig.disableAnimation"
-          />
-          shy
-        </label>
-      </label>
-      <label>
-        config.type:
-        <label>
-          <input
-            type="radio"
-            name="type"
-            value="shy"
-            [(ngModel)]="dialogConfig.type"
-          />
-          shy
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="type"
-            value="push"
-            [(ngModel)]="dialogConfig.type"
-          />
-          push
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="type"
-            value="window"
-            [(ngModel)]="dialogConfig.type"
-          />
-          window
-        </label>
-      </label>
-      <label>
-        <span> config.classes: </span>
-        <input type="text" [(ngModel)]="dialogConfig.classes" />
-      </label>
-      <label>
-        <span> config.inputs.text: </span>
-        <input type="text" [(ngModel)]="text" />
-      </label>
-      <button (click)="open()">Open</button>
+<app-header></app-header>
+<main class="grid grid-cols-auto-fill p-2 gap-1">
+  <div class="component-box">
+    <div class="component-box__header">
+      <h3 class="mr-auto">Dialog</h3>
+      <span> ? </span>
     </div>
-  </section>
+    <div class="component-box__content">
+      <button class="rounded p-2 text-white bg-amber-300 w-28">Open</button>
+    </div>
+  </div>
+  <div class="component-box">
+    <div class="component-box__header">
+      <h3 class="mr-auto">Form</h3>
+      <span> ? </span>
+    </div>
+    <div class="component-box__content">
+      <div class="h-16 w-full bg-stone-100 rounded"></div>
+      <button class="rounded p-2 text-white bg-amber-300 w-28">Open</button>
+    </div>
+  </div>
+  <div class="component-box">
+    <div class="component-box__header">
+      <h3 class="mr-auto">Toast</h3>
+      <span> ? </span>
+    </div>
+    <div class="component-box__content">
+      <div class="h-16 w-full bg-stone-100 rounded"></div>
+      <button class="rounded p-2 text-white bg-amber-300 w-28">Open</button>
+    </div>
+  </div>
+  <div class="component-box">
+    <div class="component-box__header">
+      <h3 class="mr-auto">Stepper</h3>
+      <span> ? </span>
+    </div>
+    <div class="component-box__content">
+      <div class="h-16 w-full bg-stone-100 rounded"></div>
+      <button class="rounded p-2 text-white bg-amber-300 w-28">Open</button>
+    </div>
+  </div>
+  <div class="component-box col-span-full">
+    <div class="component-box__header">
+      <h3 class="mr-auto">Utils</h3>
+      <span> ? </span>
+    </div>
+    <div class="component-box__content">
+      <div class="h-16 w-full bg-stone-100 rounded"></div>
+      <button class="rounded p-2 text-white bg-amber-300 w-28">Open</button>
+    </div>
+  </div>
 </main>
-<footer></footer>
+<footer
+  class="flex p-4 items-center justify-center w-full text-stone-500 mt-auto"
+>
+  With ❤️ from Mukhuve, LLC &copy; 2023
+</footer>

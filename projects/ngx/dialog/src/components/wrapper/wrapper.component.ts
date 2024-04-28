@@ -18,7 +18,7 @@ export const DIALOG_COMPONENT = new InjectionToken('DIALOG_COMPONENT');
 export const DIALOG_CONFIG = new InjectionToken('DIALOG_CONFIG');
 
 @Component({
-  selector: 'mkv-dialog-wrapper',
+  selector: 'mv-dialog-wrapper',
   template: `<ng-container #container></ng-container> `,
   styleUrls: ['./wrapper.component.scss'],
 })
@@ -59,10 +59,6 @@ export class WrapperComponent<C> implements OnInit {
   }
 
   ngOnInit() {
-    this.loadChild();
-  }
-
-  loadChild() {
     const { injector, container, component, config } = this;
     const { inputs } = (component as any)?.ɵcmp || {};
 
@@ -73,7 +69,7 @@ export class WrapperComponent<C> implements OnInit {
       const value = (config.inputs || {})[k];
       if (value !== undefined) (ref.instance as any)[k] = value;
     }
-    this.render.addClass(ref.location.nativeElement, 'mkv-dialog-content');
+    this.render.addClass(ref.location.nativeElement, 'mv-dialog-content');
   }
 
   @HostListener('animationend')

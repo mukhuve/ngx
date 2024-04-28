@@ -1,24 +1,44 @@
-# Ngx
+@mukhuve/ngx is a tools package for angular apps
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+# Demo
+ngx.mukhuve.com
 
-## Code scaffolding
+# Installation
 
-Run `ng generate component component-name --project ngx` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx`.
-> Note: Don't forget to add `--project ngx` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm install @mukhuve/ngx
+```
 
-## Build
+# Usage
 
-Run `ng build ngx` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Dialog    
 
-## Publishing
+```typescript
+import { DialogModule } from '@mukhuve/ngx/dialog';
 
-After building your library with `ng build ngx`, go to the dist folder `cd dist/ngx` and run `npm publish`.
+@NgModule({
+  imports: [
+    DialogModule
+  ]
+})
+export class AppModule { }
+```
+...
+```typescript
+import { DialogService } from '@mukhuve/ngx/dialog';
 
-## Running unit tests
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
 
-Run `ng test ngx` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  constructor(private dialogService: DialogService) {}
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  openDialog() {
+    this.dialogService.open({
+    });
+  }
+}
+```
