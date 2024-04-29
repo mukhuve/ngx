@@ -32,9 +32,6 @@ export class WrapperComponent<C> implements OnInit {
   @HostBinding('class.closing')
   private closing: boolean = false;
 
-  @HostBinding('class.responsive')
-  private responsive: boolean = false;
-
   @HostBinding('class.no-animate')
   private disableAnimation: boolean = false;
 
@@ -50,7 +47,6 @@ export class WrapperComponent<C> implements OnInit {
   ) {
     this.type = config.type || 'window';
     this.classes = config.classes || '';
-    this.responsive = config.responsive == undefined ? true : config.responsive;
     this.disableAnimation = config.disableAnimation || false;
     this.ref.events.subscribe((e) => {
       this.closing = e.type === 'beforeclose';
@@ -80,6 +76,9 @@ export class WrapperComponent<C> implements OnInit {
   @HostListener('document:keydown.escape', ['$event'])
   close(event: KeyboardEvent) {
     event.stopImmediatePropagation();
+    event.stopPropagation();
+    event.preventDefault();
+
     this.ref.close();
   }
 }

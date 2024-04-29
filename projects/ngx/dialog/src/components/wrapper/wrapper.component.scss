@@ -2,16 +2,9 @@
   animation-fill-mode: forwards;
   animation-duration: var(--dialog-animation-duration, 180ms);
 
-  @apply flex flex-row items-stretch justify-start bg-white max-w-[100svw] max-h-[100svh]
-         min-w-[100svw] min-h-[100svh] md:min-w-[unset] md:min-h-[unset];
-
-  &.responsive {
-    animation-name: zoomIn !important;
-    border-radius: 0 !important;
-    &.closing {
-      animation-name: zoomOut !important;
-    }
-  }
+  @apply flex flex-col items-stretch justify-start bg-white shadow-xl
+         w-svw h-svh min-w-[100svw] min-h-[100svh] max-w-[100svw] max-h-[100svh]
+         sm:w-fit sm:h-fit sm:min-w-[unset] sm:min-h-[unset];
 
   &.no-animate {
     animation-name: none !important;
@@ -20,23 +13,15 @@
 
 :host[type="window"] {
   animation-name: fadeInUpBig;
-  border-radius: 9px;
-  // min-width: 80svw;
-  // min-height: 70svh;
-  overflow: hidden;
+
   &.closing {
     animation-name: fadeOutDownBig;
   }
 }
 
 :host[type="shy"] {
-  min-width: 42svw;
-  min-height: 100svh;
-  max-width: 63svw;
-  height: 100svh;
-  width: auto;
-  border-radius: 9px 0 0 9px;
-  box-shadow: 0 0 6rem -4rem black;
+  @apply h-svh;
+
   animation-name: fadeInRight;
   &.closing {
     animation-name: fadeOutRight;
@@ -47,9 +32,18 @@
 :host[type="fullscreen"] {
   min-width: 100svw;
   min-height: 100svh;
-  border-radius: 0 !important;
+
   animation-name: zoomIn;
   &.closing {
     animation-name: zoomOut;
+  }
+}
+
+@media (max-width: 640px) {
+  :host[type] {
+    animation-name: zoomIn;
+    &.closing {
+      animation-name: zoomOut;
+    }
   }
 }
