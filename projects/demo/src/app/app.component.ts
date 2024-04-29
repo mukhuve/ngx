@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './components/form/form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SampleComponent } from './components/sample/sample.component';
+import { DialogService } from '@mukhuve/ngx/dialog';
 
 @Component({
   standalone: true,
@@ -19,6 +20,8 @@ import { SampleComponent } from './components/sample/sample.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  dialog = inject(DialogService);
+
   text: string = '';
 
   constructor() {
@@ -34,5 +37,11 @@ export class AppComponent {
 
   mode(mode: 'dark' | 'light') {
     localStorage['theme'] = mode;
+  }
+
+  openDialog() {
+    this.dialog.open(SampleComponent, {
+      type: 'shy',
+    });
   }
 }
